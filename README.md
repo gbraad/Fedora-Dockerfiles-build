@@ -10,6 +10,8 @@ Build wrapper for [Fedora-Dockerfiles](https://gitlab.com/gbraad/Fedora-Dockerfi
 Usage
 -----
 
+  * Fedora base (24)  
+    `docker pull registry.gitlab.com/gbraad/fedora:24`
   * Fedora Ansible  
     `docker pull registry.gitlab.com/gbraad/fedora:ansible`
   * ...
