@@ -4,8 +4,16 @@ services:
 
 before_script:
   - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
+  - git clone https://github.com/fedora-cloud/docker-brew-fedora brew --depth 1 -b 24
   - git clone https://gitlab.com/gbraad/Fedora-Dockerfiles.git dockerfiles --depth 1
-  
+
+build_base:
+  script:
+    - docker build -t registry.gitlab.com/gbraad/fedora:24 ./brew/ 
+    - docker push registry.gitlab.com/gbraad/fedora:24
+  only:
+    - master
+
 build_ansible:
   script:
     - docker build -t registry.gitlab.com/gbraad/fedora:ansible ./dockerfiles/ansible 
