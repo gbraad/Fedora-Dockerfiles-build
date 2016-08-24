@@ -10,10 +10,19 @@ Build wrapper for [Fedora-Dockerfiles](https://gitlab.com/gbraad/Fedora-Dockerfi
 Usage
 -----
 
+### Cloned
+
   * Fedora base (24)  
     `docker pull registry.gitlab.com/gbraad/fedora:24`
+
+
+### Custom
+
   * Fedora Ansible  
     `docker pull registry.gitlab.com/gbraad/fedora:ansible`
+  * Fedora Atomic-reactor  
+    `docker pull registry.gitlab.com/gbraad/fedora:atomicreactor`  
+    for instruction on use, read about [Atomic reactor](https://github.com/gbraad/scratchpad/blob/master/technology/atomic.md#atomic-reactor)
   * ...
 
 
